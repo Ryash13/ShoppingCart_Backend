@@ -1,0 +1,13 @@
+eureka:
+  instance:
+    hostname: ${application.uris[0]:localhost}
+    prefer-ip-address: true
+    lease-renewal-internal-in-seconds: 10
+    lease-expiration-duration-in-seconds: 20
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:9090/eureka
+    instance:
+      hostname: localhost
